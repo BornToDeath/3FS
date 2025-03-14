@@ -1,0 +1,1 @@
+make HF3FS_LIB_DIR=3FS/build/src/lib/api/ HF3FS_INCLUDE_DIR=3FS/src/lib/api/
