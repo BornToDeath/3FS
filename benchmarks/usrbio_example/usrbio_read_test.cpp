@@ -1,19 +1,15 @@
-//
-// Created by lxq on 2025/3/13.
-//
-#include <atomic>
-#include <chrono>
 #include <cstdio>
 #include <cstdlib>
-#include <ctime>
-#include <errno.h>
-#include <fcntl.h>
-#include <fstream>
-#include <iomanip>
 #include <iostream>
-#include <sys/stat.h>
+#include <fstream>
 #include <unistd.h>
+#include <iomanip>
+#include <ctime>
+#include <atomic>
+#include <errno.h>
 #include <vector>
+#include <sys/stat.h>
+#include <fcntl.h>
 
 #include "hf3fs_usrbio.h"
 
@@ -31,7 +27,7 @@ int main() {
   printf("hf3fs_iovcreate return: %d\n", ret);
   if (ret != 0) return -1;
 
-  int fd = open("/3fs/stage/lxq_usrbio_test/kvcache.bin", O_RDONLY);
+  int fd = open("/3fs/stage/lxq/kvcache.bin", O_RDONLY);
   ret = hf3fs_reg_fd(fd, 0);
   printf("hf3fs_reg_fd return: %d\n", ret);
 

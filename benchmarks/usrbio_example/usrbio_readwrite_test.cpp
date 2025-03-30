@@ -41,9 +41,9 @@ int main() {
   void *kvcache = generate_kvcache();
 
   // 打开KVCache文件
-  const std::string filename = mountpoint + "kvcache.bin";
+  const std::string filename = mountpoint + "lxq/kvcache.bin";
   int fd = open(filename.c_str(), O_RDWR | O_CREAT | O_APPEND, 0666);
-  printf("open return: %d, errno: %d\n", fd, errno);
+  printf("open return: %d, errno: %d\n, file: %s", fd, errno, filename.c_str());
   if (fd == -1) return -1;
 
   ret = hf3fs_reg_fd(fd, 0);
